@@ -2373,7 +2373,7 @@ public class DataBase{
 	 *  CREATION D'UN COMBOBOX A PARTIR DE LA BASE     *
 	 ***************************************************/	
 
-	public static JComboBox<String>   recuperAU () {
+	public static JComboBox<String>recuperAU () {
 		JComboBox<String> combo=new JComboBox<>();
 		JSONArray list_anne = null;
 		try {
