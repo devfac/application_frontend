@@ -57,7 +57,7 @@ public class request_api {
 }
 
 public static JSONArray get_anne_univ() throws IOException{
-	URL url = new URL("http://localhost/api/v1/anne_univ/?skip=0&limit=100");
+	URL url = new URL("http://"+Main.host+"/api/v1/anne_univ/?skip=0&limit=100");
 	HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
 	conn.setRequestProperty("Authorization","Bearer "+Main.token);

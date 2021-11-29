@@ -152,7 +152,7 @@ import panel.Panneau8;
 
 		connectBouton.addActionListener(new  ActionListener(){
 			public  void actionPerformed(ActionEvent arg0){
-				String request = "http://localhost/api/v1/login/access-token";
+				String request = "http://"+Main.host+"/api/v1/login/access-token";
 				String username = nom.getText();
 				String password = mdpF.getText();
 				if (username.length() > 0 && password.length() > 0){
@@ -170,6 +170,7 @@ import panel.Panneau8;
 						Main.role = response.getString("role");
 						launch_app();
 						request_api.get_anne_univ();
+						
 					}
 
 				} catch (IOException e) {

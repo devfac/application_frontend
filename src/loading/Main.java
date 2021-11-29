@@ -35,7 +35,7 @@ import login.LoginPrincipale;
 		public static String token = "";
 		public static String role = "";
 		public static String code = "";
-		public static String host = "localhost";
+		public static String host = "192.168.88.10";
 		public Main() {
 			JPanel an=new JPanel();
 			DateFormat displayFormat= new SimpleDateFormat("dd MMMM YYYY");

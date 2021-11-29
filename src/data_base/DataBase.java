@@ -2382,7 +2382,6 @@ public class DataBase{
 			e.printStackTrace();
 		}
 		String l[]=new String[list_anne.length()];
-		int j=0;
 		for (int i=0; i< l.length;i++){
 			l[i]=list_anne.getJSONObject(i).getString("title");
 		}
