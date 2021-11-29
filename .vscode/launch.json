@@ -1,0 +1,1904 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch HtmlAssetTranslator",
+            "request": "launch",
+            "mainClass": "com.google.zxing.HtmlAssetTranslator",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringsResourceTranslator",
+            "request": "launch",
+            "mainClass": "com.google.zxing.StringsResourceTranslator",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CommandLineEncoder",
+            "request": "launch",
+            "mainClass": "com.google.zxing.client.j2se.CommandLineEncoder",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CommandLineRunner",
+            "request": "launch",
+            "mainClass": "com.google.zxing.client.j2se.CommandLineRunner",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch GUIRunner",
+            "request": "launch",
+            "mainClass": "com.google.zxing.client.j2se.GUIRunner",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataBase",
+            "request": "launch",
+            "mainClass": "data_base.DataBase",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch garage",
+            "request": "launch",
+            "mainClass": "garage",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HistParAge",
+            "request": "launch",
+            "mainClass": "histgramme.HistParAge",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HistParFil",
+            "request": "launch",
+            "mainClass": "histgramme.HistParFil",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HistParFiliere",
+            "request": "launch",
+            "mainClass": "histgramme.HistParFiliere",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HistParSex",
+            "request": "launch",
+            "mainClass": "histgramme.HistParSex",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HistParSexe",
+            "request": "launch",
+            "mainClass": "histgramme.HistParSexe",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionCarte",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionCarte",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionCarteParticulier",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionCarteParticulier",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionCertificat",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionCertificat",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionListe",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionListe",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionListeAuExamen",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionListeAuExamen",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionListeB",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionListeB",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionListeDroit",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionListeDroit",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionListeParGroupe",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionListeParGroupe",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionPresenceAuExam",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionPresenceAuExam",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionReleve",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionReleve",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionReleveOrg",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionReleveOrg",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionResultatFinale",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionResultatFinale",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionResultatLicence",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionResultatLicence",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionResultatUe",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionResultatUe",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionResultatUeGlobal",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionResultatUeGlobal",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionResultatUeSansNote",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionResultatUeSansNote",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionStatistique",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionStatistique",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionStatistiqueAge",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionStatistiqueAge",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreImpressionStatistiqueBach",
+            "request": "launch",
+            "mainClass": "impression.FenetreImpressionStatistiqueBach",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loading",
+            "request": "launch",
+            "mainClass": "loading.Loading",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Methode",
+            "request": "launch",
+            "mainClass": "loading.Methode",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lister",
+            "request": "launch",
+            "mainClass": "org.apache.commons.compress.archivers.Lister",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CLI",
+            "request": "launch",
+            "mainClass": "org.apache.commons.compress.archivers.sevenz.CLI",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Version",
+            "request": "launch",
+            "mainClass": "org.apache.poi.Version",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch OOXMLPasswordsTry",
+            "request": "launch",
+            "mainClass": "org.apache.poi.crypt.examples.OOXMLPasswordsTry",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch VSDDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hdgf.dev.VSDDumper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch VisioTextExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hdgf.extractor.VisioTextExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HMEFDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hmef.dev.HMEFDumper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HMEFContentsExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hmef.extractor.HMEFContentsExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HPBFDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpbf.dev.HPBFDumper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PLCDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpbf.dev.PLCDumper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PublisherTextExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpbf.extractor.PublisherTextExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CopyCompare",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.examples.CopyCompare",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ModifyDocumentSummaryInformation",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.examples.ModifyDocumentSummaryInformation",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReadCustomPropertySets",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.examples.ReadCustomPropertySets",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReadTitle",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.examples.ReadTitle",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WriteAuthorAndTitle",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.examples.WriteAuthorAndTitle",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WriteTitle",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.examples.WriteTitle",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HPSFPropertiesExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.extractor.HPSFPropertiesExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PropertyIDMap",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.wellknown.PropertyIDMap",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PPDrawingTextListing",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.PPDrawingTextListing",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PPTXMLDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.PPTXMLDump",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SLWTListing",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.SLWTListing",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SLWTTextListing",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.SLWTTextListing",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SlideAndNotesAtomListing",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.SlideAndNotesAtomListing",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SlideIdListing",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.SlideIdListing",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SlideShowDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.SlideShowDumper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SlideShowRecordDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.SlideShowRecordDumper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch TextStyleListing",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.TextStyleListing",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch UserEditAndPersistListing",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.dev.UserEditAndPersistListing",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ApacheconEU08",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.ApacheconEU08",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BulletsDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.BulletsDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateHyperlink",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.CreateHyperlink",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataExtraction",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.DataExtraction",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graphics2DDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.Graphics2DDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HeadersFootersDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.HeadersFootersDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hyperlinks",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.Hyperlinks",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SoundFinder",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.SoundFinder",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch TableDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.examples.TableDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ImageExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.extractor.ImageExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PowerPointExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.extractor.PowerPointExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickButCruddyTextExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hslf.extractor.QuickButCruddyTextExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HSMFDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hsmf.dev.HSMFDump",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch TypesLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hsmf.dev.TypesLister",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Msg2txt",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hsmf.examples.Msg2txt",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch OutlookTextExtactor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hsmf.extractor.OutlookTextExtactor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch OutlookTextExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hsmf.extractor.OutlookTextExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExcelToFoConverter",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.converter.ExcelToFoConverter",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExcelToHtmlConverter",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.converter.ExcelToHtmlConverter",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BiffDrawingToXml",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.BiffDrawingToXml",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BiffViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.BiffViewer",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch EFBiffViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.EFBiffViewer",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FormulaViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.FormulaViewer",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReSave",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.ReSave",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch RecordLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.RecordLister",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XLS2CSVmra",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.eventusermodel.examples.XLS2CSVmra",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.extractor.ExcelExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch OldExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.extractor.OldExcelExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch AddDimensionedImage",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.AddDimensionedImage",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Alignment",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.Alignment",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BigExample",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.BigExample",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Borders",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.Borders",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CellComments",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.CellComments",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CellTypes",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.CellTypes",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateCells",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.CreateCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateDateCells",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.CreateDateCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch EmbeddedObjects",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.EmbeddedObjects",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch EventExample",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.EventExample",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FrillsAndFills",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.FrillsAndFills",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HSSFReadWrite",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.HSSFReadWrite",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HyperlinkFormula",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.HyperlinkFormula",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hyperlinks(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.Hyperlinks",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch InCellLists",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.InCellLists",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch MergedCells",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.MergedCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch NewLinesInCells",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.NewLinesInCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch NewSheet",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.NewSheet",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch NewWorkbook",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.NewWorkbook",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch OfficeDrawing",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.OfficeDrawing",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch OfficeDrawingWithGraphics",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.OfficeDrawingWithGraphics",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Outlines",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.Outlines",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReadWriteWorkbook",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.ReadWriteWorkbook",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch RepeatingRowsAndColumns",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.RepeatingRowsAndColumns",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SplitAndFreezePanes",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.SplitAndFreezePanes",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WorkingWithFonts",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.WorkingWithFonts",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ZoomSheet",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.usermodel.examples.ZoomSheet",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickTest",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hwpf.QuickTest",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Word2Forrest",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hwpf.Word2Forrest",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WordToFoConverter",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hwpf.converter.WordToFoConverter",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WordToHtmlConverter",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hwpf.converter.WordToHtmlConverter",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WordToTextConverter",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hwpf.converter.WordToTextConverter",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HWPFLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hwpf.dev.HWPFLister",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WordExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hwpf.extractor.WordExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch OOXMLLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ooxml.dev.OOXMLLister",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch OOXMLPrettyPrint",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ooxml.dev.OOXMLPrettyPrint",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CommandLineTextExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ooxml.extractor.CommandLineTextExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSDump",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSLister",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSViewer",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSReader",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.eventfilesystem.POIFSReader",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSFileSystem",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.filesystem.POIFSFileSystem",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch VBAMacroExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.macros.VBAMacroExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch AddDimensionedImage(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.AddDimensionedImage",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch AligningCells",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.AligningCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BusinessPlan",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.BusinessPlan",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalendarDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.CalendarDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CellStyleDetails",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.CellStyleDetails",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConditionalFormats",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.ConditionalFormats",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch DrawingBorders",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.DrawingBorders",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExcelComparator",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.ExcelComparator",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch LoadEmbedded",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.LoadEmbedded",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch LoanCalculator",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.LoanCalculator",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SSPerformanceTest",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.SSPerformanceTest",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch TimesheetDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.TimesheetDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ToCSV",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.ToCSV",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CheckFunctionsSupported",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.formula.CheckFunctionsSupported",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SettingExternalFunction",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.formula.SettingExternalFunction",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch UserDefinedFunctionExample",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.formula.UserDefinedFunctionExample",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ToHtml",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ss.examples.html.ToHtml",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch DrawingDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.DrawingDump",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FontMetricsDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.FontMetricsDumper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HexDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.HexDump",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XDGFVisioExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xdgf.extractor.XDGFVisioExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HierarchyPrinter",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xdgf.util.HierarchyPrinter",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch VsdxToPng",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xdgf.util.VsdxToPng",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSLFPowerPointExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.extractor.XSLFPowerPointExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BarChartDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.BarChartDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ChartFromScratch",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.ChartFromScratch",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataExtraction(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.DataExtraction",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch MergePresentations",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.MergePresentations",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PieChartDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.PieChartDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tutorial1",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.Tutorial1",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tutorial2",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.Tutorial2",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tutorial3",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.Tutorial3",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tutorial4",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.Tutorial4",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tutorial5",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.Tutorial5",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tutorial6",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.Tutorial6",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tutorial7",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.Tutorial7",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Step1",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.tutorial.Step1",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Step2",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.usermodel.tutorial.Step2",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PPTX2PNG",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.util.PPTX2PNG",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XLSX2CSV",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.eventusermodel.XLSX2CSV",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FromHowTo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.eventusermodel.examples.FromHowTo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch LoadPasswordProtectedXlsxStreaming",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.eventusermodel.examples.LoadPasswordProtectedXlsxStreaming",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSSFBEventBasedExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.extractor.XSSFBEventBasedExcelExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSSFEventBasedExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.extractor.XSSFEventBasedExcelExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSSFExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.extractor.XSSFExcelExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HybridStreaming",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.streaming.examples.HybridStreaming",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Outlining",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.streaming.examples.Outlining",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SavePasswordProtectedXlsx",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.streaming.examples.SavePasswordProtectedXlsx",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch AligningCells(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.AligningCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BarAndLineChart",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.BarAndLineChart",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BarChart",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.BarChart",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BigGridDemo",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.BigGridDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalendarDemo(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.CalendarDemo",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CellComments(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.CellComments",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateCell",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.CreateCell",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreatePivotTable",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.CreatePivotTable",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreatePivotTable2",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.CreatePivotTable2",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateTable",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.CreateTable",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateUserDefinedDataFormats",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.CreateUserDefinedDataFormats",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CustomXMLMapping",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.CustomXMLMapping",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch EmbeddedObjects(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.EmbeddedObjects",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExcelChartWithTargetLine",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.ExcelChartWithTargetLine",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FillsAndColors",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.FillsAndColors",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FitSheetToOnePage",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.FitSheetToOnePage",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HeadersAndFooters",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.HeadersAndFooters",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HyperlinkExample",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.HyperlinkExample",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch IterateCells",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.IterateCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch LineChart",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.LineChart",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch LoadPasswordProtectedXlsx",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.LoadPasswordProtectedXlsx",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch MergingCells",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.MergingCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch NewLinesInCells(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.NewLinesInCells",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Outlining(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.Outlining",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ScatterChart",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.ScatterChart",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SelectedSheet",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.SelectedSheet",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ShiftRows",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.ShiftRows",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SplitAndFreezePanes(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.SplitAndFreezePanes",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WorkbookProperties",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.WorkbookProperties",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WorkingWithBorders",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.WorkingWithBorders",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WorkingWithFonts(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.WorkingWithFonts",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WorkingWithPageSetup",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.WorkingWithPageSetup",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WorkingWithPictures",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.WorkingWithPictures",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch WorkingWithRichText",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.usermodel.examples.WorkingWithRichText",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XWPFWordExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.extractor.XWPFWordExtractor",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BarChartExample",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.BarChartExample",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BetterHeaderFooterExample",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.BetterHeaderFooterExample",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ChartFromScratch(1)",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.ChartFromScratch",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch HeaderFooterTable",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.HeaderFooterTable",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleDocument",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.SimpleDocument",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleDocumentWithHeader",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.SimpleDocumentWithHeader",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleImages",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.SimpleImages",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleTable",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.SimpleTable",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch UpdateEmbeddedDoc",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.usermodel.examples.UpdateEmbeddedDoc",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch JarHelper",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.common.JarHelper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch NameUtil",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.common.NameUtil",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inst2Xsd",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.inst2xsd.Inst2Xsd",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch JamServiceFactory",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.jam.JamServiceFactory",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ParserClassBuilder",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.jam.internal.parser.ParserClassBuilder",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch REUtil",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.regex.REUtil",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch EditBuildScript",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.repackage.EditBuildScript",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Repackage",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.repackage.Repackage",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Diff",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.Diff",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FactorImports",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.FactorImports",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch InstanceValidator",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.InstanceValidator",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrettyPrinter",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.PrettyPrinter",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch RunXQuery",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.RunXQuery",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaCompiler",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.SchemaCompiler",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaCopy",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.SchemaCopy",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaResourceManager",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.SchemaResourceManager",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch StreamInstanceValidator",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.StreamInstanceValidator",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch TypeHierarchyPrinter",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.TypeHierarchyPrinter",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSTCTester",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.XSTCTester",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XsbDumper",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.XsbDumper",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch XPathGenerator",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.xpathgen.XPathGenerator",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaInstanceGenerator",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.xsd2inst.SchemaInstanceGenerator",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch JCommon",
+            "request": "launch",
+            "mainClass": "org.jfree.JCommon",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch ClassPathDebugger",
+            "request": "launch",
+            "mainClass": "org.jfree.base.ClassPathDebugger",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch JFreeChart",
+            "request": "launch",
+            "mainClass": "org.jfree.chart.JFreeChart",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch BarChartDemo1",
+            "request": "launch",
+            "mainClass": "org.jfree.chart.demo.BarChartDemo1",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PieChartDemo1",
+            "request": "launch",
+            "mainClass": "org.jfree.chart.demo.PieChartDemo1",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch TimeSeriesChartDemo1",
+            "request": "launch",
+            "mainClass": "org.jfree.chart.demo.TimeSeriesChartDemo1",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch RadialLayout",
+            "request": "launch",
+            "mainClass": "org.jfree.layout.RadialLayout",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch PGJDBCMain",
+            "request": "launch",
+            "mainClass": "org.postgresql.util.PGJDBCMain",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreEnseignant",
+            "request": "launch",
+            "mainClass": "panel.FenetreEnseignant",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreListeAuExamen",
+            "request": "launch",
+            "mainClass": "panel.FenetreListeAuExamen",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreListeParGroupe",
+            "request": "launch",
+            "mainClass": "panel.FenetreListeParGroupe",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreNote",
+            "request": "launch",
+            "mainClass": "panel.FenetreNote",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreRelever",
+            "request": "launch",
+            "mainClass": "panel.FenetreRelever",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreResultat",
+            "request": "launch",
+            "mainClass": "resultat.FenetreResultat",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch RenseignementMat",
+            "request": "launch",
+            "mainClass": "statisique.RenseignementMat",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch StatBach",
+            "request": "launch",
+            "mainClass": "statisique.StatBach",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch StatDiplome",
+            "request": "launch",
+            "mainClass": "statisique.StatDiplome",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch StatParAge",
+            "request": "launch",
+            "mainClass": "statisique.StatParAge",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch StatTotal",
+            "request": "launch",
+            "mainClass": "statisique.StatTotal",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Auteur",
+            "request": "launch",
+            "mainClass": "zdialog.Auteur",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch CarteParticulier",
+            "request": "launch",
+            "mainClass": "zdialog.CarteParticulier",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fenetre",
+            "request": "launch",
+            "mainClass": "zdialog.Fenetre",
+            "projectName": "maths_finale"
+        },
+        {
+            "type": "java",
+            "name": "Launch Parametre",
+            "request": "launch",
+            "mainClass": "zdialog.Parametre",
+            "projectName": "maths_finale"
+        }
+    ]
+}

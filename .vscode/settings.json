@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "library/json-20210307.jar",
+        ]
+    }
+}
