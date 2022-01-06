@@ -29,6 +29,7 @@ import data_base.DataBase;
 import gest_note.GestNoteMathsFinales;
 import gest_note.GestNoteMathsNormal;
 import gest_note.GestNoteMathsRattrapage;
+import image.LoadImage;
 import inscription.FieldFormat;
 import loading.Main;
 import loading.Methode;
@@ -73,38 +74,41 @@ public class LoginPrincipale{
 	public static JButton mentGH = new  JButton("Ouvrir la fen�tre");
 	//public static JButton adss= new  JButton("CERTIFICAT/ATTESTATION");
 	
-	public static JButton inscription = new  JButton("INSCRIPTION");
-	public static JButton reinscription= new  JButton("RE-INSCRIPTION");
-	public static JButton stat= new  JButton("STATISTIQUE");
-	public static JButton gestEt = new  JButton("GESTION ETUDIANT");
-	public static JButton cert= new  JButton("CERTIFICAT/ATTESTATION");
-	public static JButton gestEtBoursP = new  JButton(" BOURSE PASSANT");
-	public static JButton gestEtBoursR = new  JButton(" BOURSE REDOUBLANT");
-	public static JButton gestNoteNorm= new  JButton("SESSION NORMAL");
-	public static JButton gestNoteRat= new  JButton("SESSION RATTRAPAGE");
-	public static JButton gestNoteFin= new  JButton("NOTE FINALE");
+	public static JButton inscription = new  JButton(LoadImage.transformeb(120, 30, "/Ins.jpg"));
+	public static JButton reinscription= new  JButton(LoadImage.transformeb(120, 30, "/Rei.jpg"));
+	public static JButton stat= new  JButton(LoadImage.transformeb(120, 30, "/sta.jpg"));
+	public static JButton gestEt = new  JButton(LoadImage.transformeb(120, 30, "/ges.jpg"));
+	public static JButton cert= new  JButton(LoadImage.transformeb(120, 30, "/cer.jpg"));
+	public static JButton gestEtBoursP = new  JButton(LoadImage.transformeb(120, 30, "/pas.jpg"));
+	public static JButton gestEtBoursR = new  JButton(LoadImage.transformeb(120, 30, "/red.jpg"));
+	public static JButton gestNoteNorm= new  JButton(LoadImage.transformeb(120, 30, "/nor.jpg"));
+	public static JButton gestNoteRat= new  JButton(LoadImage.transformeb(120, 30, "/rat.jpg"));
+	public static JButton gestNoteFin= new  JButton(LoadImage.transformeb(120, 30, "/fin.jpg"));
 
-	public static JButton gestImport= new  JButton("IMPORTER");
+	public static JButton gestImport= new  JButton(LoadImage.transformeb(120, 30, "/imp.jpg"));
 	public static JButton valide= new  JButton("VALIDE");
-	public static JButton gestMat= new  JButton("GESTION MATIERE ");
-	public static JButton gestPers= new  JButton("GESTION PERSONNEL ");
-	public static JButton param= new  JButton("PARAMETRE ");
-	public static JButton gestCartPart= new  JButton("CARTE SPECIAL  ");
-	public static JButton gestCartf= new  JButton("FACE CARTE");
-	public static JButton gestCartd= new  JButton("ARRIERE CARTE ");
+	public static JButton gestMat= new  JButton(LoadImage.transformeb(120, 30, "/matier.jpg"));
+	public static JButton gestPers= new  JButton(LoadImage.transformeb(120, 30, "/per.jpg"));
+	public static JButton param= new  JButton(LoadImage.transformeb(120, 30, "/par.jpg"));
+	public static JButton gestCartPart= new  JButton(LoadImage.transformeb(120, 30, "/spe.jpg"));
+	public static JButton gestCartf= new  JButton(LoadImage.transformeb(120, 30, "/face.jpg"));
+	public static JButton gestCartd= new  JButton(LoadImage.transformeb(120, 30, "/arr.jpg"));
 	
-	public static JButton gestEtDroit = new  JButton(" DROIT ET TRANCHE");
-	public static JButton gestDroit= new  JButton("AJOUT DROIT");
-	public static JButton enseignant= new  JButton("ENSEIGNANT");
+	public static JButton gestEtDroit = new  JButton(LoadImage.transformeb(120, 30, "/dro.jpg"));
+	public static JButton gestDroit= new  JButton(LoadImage.transformeb(120, 30, "/ajo.jpg"));
+	public static JButton enseignant= new  JButton(LoadImage.transformeb(120, 30, "/ens.jpg"));
 	
 	
+	public static JPanel  menuPanel=new JPanel();
 	public static JPanel  panAnne=new JPanel();
 	public static JPanel  panAnne1=new JPanel();
+	public static JPanel  mentionPanel=new JPanel();
 	
 	public static JPanel  ligne1=new JPanel();
 	public static JPanel  ligne2=new JPanel();
 	public static JPanel  ligne3=new JPanel();
 	public static JPanel  pan1=new JPanel();
+	public static JPanel  espacePanel=new JPanel();
 	
 	public static JPanel  pan11=new JPanel();
 	
@@ -114,12 +118,14 @@ public class LoginPrincipale{
 	public static JLabel lab=new JLabel();
 	public static JLabel anne=new JLabel("ANNEE UNIVERSITAIRE : ");
 	public static JLabel anneField=new JLabel("2020-2021");
-	public static JLabel nouv=new JLabel("Nouvelle Ann�e");
-	public static JLabel ou=new JLabel("    ou   ");
-	public static JLabel change=new JLabel("Changer l'Ann�e");
+	public static JLabel mentionLabel=new JLabel("Mention");
+	public static JLabel nouv=new JLabel("Nouvelle Année");
+	public static JLabel ou=new JLabel("       ");
+	public static JLabel change=new JLabel("Changer l'Année");
 	public static JTextField anneTxt=new FieldFormat("anne");
 	
 	public static JComboBox<String> typeAn=new JComboBox<String>();
+	public static JComboBox<String> mentionComboBox=new JComboBox<String>();
 	public static Panneau  panelPrincipale=new Panneau("/fac3.jpg");
 	public static JScrollPane scrollPane;
 	public static JScrollPane scrollPane1;
@@ -210,16 +216,6 @@ public class LoginPrincipale{
 		gestEtDroit.setFont(poilice2);
 		cert.setFont(poilice2);
 		
-		/*inscription.setEnabled(false);
-		reinscription.setEnabled(false);
-		gestImport.setEnabled(false);
-		valide.setEnabled(false);
-		gestEtDroit.setEnabled(false);
-		cert.setEnabled(false);
-		gestCartf.setEnabled(false);
-		gestCartd.setEnabled(false);
-		gestCartPart.setEnabled(false);
-		gestDroit.setEnabled(false);*/
 		
 		mentPA.setFont(poilice2);
 		mentPC.setFont(poilice2);
@@ -262,6 +258,7 @@ public class LoginPrincipale{
 		stat.setPreferredSize(new Dimension(120,30));
 		
 		change.setFont(poilice1);
+		mentionLabel.setFont(poilice1);
 		nouv.setFont(poilice1);
 		ou.setFont(poilice1);
 		
@@ -271,9 +268,12 @@ public class LoginPrincipale{
 		
 		nouv.setFont(font.deriveFont(attributes));
 		change.setFont(font.deriveFont(attributes));
+		mentionLabel.setFont(font.deriveFont(attributes));
 		
 		nouv.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		change.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		mentionLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
 		
 		mentPA.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		mentPC.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -298,26 +298,29 @@ public class LoginPrincipale{
 		gestDroit.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		enseignant.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		
-		gestEt.setPreferredSize(new Dimension(160,30));
-		gestEtBoursP.setPreferredSize(new Dimension(160,30));
-		gestEtBoursR.setPreferredSize(new Dimension(160,30));
-		cert.setPreferredSize(new Dimension(160,30));
-		gestNoteNorm.setPreferredSize(new Dimension(150,30));
-		gestNoteRat.setPreferredSize(new Dimension(150,30));
-		gestNoteFin.setPreferredSize(new Dimension(150,30));
+		gestEt.setPreferredSize(new Dimension(120,30));
+		gestEtBoursP.setPreferredSize(new Dimension(120,30));
+		gestEtBoursR.setPreferredSize(new Dimension(120,30));
+		cert.setPreferredSize(new Dimension(120,30));
+		gestNoteNorm.setPreferredSize(new Dimension(120,30));
+		gestNoteRat.setPreferredSize(new Dimension(120,30));
+		gestNoteFin.setPreferredSize(new Dimension(120,30));
 		gestImport.setPreferredSize(new Dimension(120,30));
 		valide.setPreferredSize(new Dimension(120,30));
-		gestMat.setPreferredSize(new Dimension(130,30));
-		gestPers.setPreferredSize(new Dimension(150,30));
-		param.setPreferredSize(new Dimension(150,30));
+		gestMat.setPreferredSize(new Dimension(120,30));
+		gestPers.setPreferredSize(new Dimension(120,30));
+		param.setPreferredSize(new Dimension(120,30));
 		gestCartf.setPreferredSize(new Dimension(120,30));
 		gestCartPart.setPreferredSize(new Dimension(120,30));
 		gestCartd.setPreferredSize(new Dimension(120,30));
 		
-		gestEtDroit.setPreferredSize(new Dimension(160,30));
-		gestDroit.setPreferredSize(new Dimension(130,30));
-		enseignant.setPreferredSize(new Dimension(150,30));
+		gestEtDroit.setPreferredSize(new Dimension(120,30));
+		gestDroit.setPreferredSize(new Dimension(120,30));
+		enseignant.setPreferredSize(new Dimension(120,30));
 		
+		panAnne.setBackground(Color.WHITE);
+		panAnne1.setBackground(Color.white);
+		mentionPanel.setBackground(Color.white);
 		
 		
 		anne.setFont(poilice);
@@ -325,33 +328,48 @@ public class LoginPrincipale{
 		
 		panAnne1.add(anneTxt);
 		panAnne1.add(valide);
+		mentionPanel.add(mentionComboBox);
+
 		
 		
 		valide.setPreferredSize(new Dimension(80,20));
 		panAnne1.setPreferredSize(new Dimension(170,30));
+		mentionPanel.setPreferredSize(new Dimension(200,30));
+		mentionComboBox.setPreferredSize(new Dimension(200,20));
 		panelPrincipale.setPreferredSize(new Dimension(1000,660));
 		pan1.setPreferredSize(new Dimension(680,460));
 		pan11.setPreferredSize(new Dimension(680,460));
-		
+		espacePanel.setPreferredSize(new Dimension(40,20));
+		espacePanel.setOpaque(false);
+
 		ligne1.setPreferredSize(new Dimension(1500,1));
 		ligne2.setPreferredSize(new Dimension(1500,1));
 		ligne3.setPreferredSize(new Dimension(1500,1));
+		menuPanel.setPreferredSize(new Dimension(1500, 40));
+		menuPanel.setBackground(Color.white);
 		
 		
 		
+		panelPrincipale.add(menuPanel);
+		menuPanel.add(mentionLabel);
+		menuPanel.add(mentionPanel);
+		mentionPanel.setVisible(false);
+		menuPanel.add(espacePanel);
+		menuPanel.add(change);
+		menuPanel.add(panAnne);
+		panAnne.setVisible(false);
+		menuPanel.add(ou);
+		menuPanel.add(nouv);
+		menuPanel.add(panAnne1);
+		panAnne1.setVisible(false);
+		panelPrincipale.add(ligne1);
+
 		panelPrincipale.add(anne);
 		panelPrincipale.add(anneField);
 		panelPrincipale.add(lab);
 		lab.setVisible(false);
-		panelPrincipale.add(ligne1);
-		panelPrincipale.add(change);
-		panelPrincipale.add(panAnne);
-		panAnne.setVisible(false);
-		panelPrincipale.add(ou);
-		panelPrincipale.add(nouv);
-		panelPrincipale.add(panAnne1);
-		panAnne1.setVisible(false);
-		panelPrincipale.add(ligne2);
+		
+	
 		
 		GridLayout gl = new  GridLayout(2, 2);
 		gl.setHgap(5); //Cinq pixels d'espace entre les colonnes (H comme Horizontal)
@@ -379,33 +397,7 @@ public class LoginPrincipale{
 				pan1.add(pan[i]);
 				pan[i].setOpaque(false);
 				break;
-		/*	case 1:
-				pan[i]=new JPanel();
-				pan[i].setBorder(tite2);
-				pan[i].setBackground(Color.cyan);
-				pan[i].setPreferredSize(new Dimension(220,220));
-				pan[i].add(mentPC);
-				pan1.add(pan[i]);
-				pan[i].setOpaque(false);
-				break;
-			case 2:
-				pan[i]=new JPanel();
-				pan[i].setBorder(tite3);
-				pan[i].setBackground(Color.cyan);
-				pan[i].setPreferredSize(new Dimension(220,220));
-				pan[i].add(mentGH);
-				pan1.add(pan[i]);
-				pan[i].setOpaque(false);
-				break;
-			case 3:
-				pan[i]=new JPanel();
-				pan[i].setBorder(tite4);
-				pan[i].setBackground(Color.cyan);
-				pan[i].setPreferredSize(new Dimension(220,220));
-				pan[i].add(gestNote);
-				pan1.add(pan[i]);
-				pan[i].setOpaque(false);
-				break;*/
+		
 			}
 		}
 		
@@ -478,14 +470,8 @@ public class LoginPrincipale{
 		}
 		
 		pan11.setVisible(true);
-		//panelPrincipale.add(pan1);
+	
 		panelPrincipale.add(pan11);
-		/*panelPrincipale.add(inscription, BorderLayout.CENTER);
-		panelPrincipale.add(reinscription, BorderLayout.CENTER);
-		
-		panelPrincipale.add(gestMat, BorderLayout.CENTER);
-		panelPrincipale.add(gestNote, BorderLayout.CENTER);
-		//panelPrincipale.add(panAnne);*/
 		scrollPane = new JScrollPane(panelPrincipale);
 		//ajoutAu();
 	}
@@ -522,6 +508,7 @@ public class LoginPrincipale{
 			 FenetreEffectif.panelPrincipale.removeAll();
 			 FenetreEffectif.ajouter();
 			panAnne.setVisible(false);
+			mentionPanel.setVisible(false);
 			Methode.creerReprrtoire();
 			Toolkit.getDefaultToolkit().beep();
 			Main.main.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));

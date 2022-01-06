@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.FlowLayout;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -40,17 +41,18 @@ public class PanelList extends JPanel{
 		this.model=model;
 		bout1=new JButton( LoadImage.transformeb(100, 25, "/imprimer.jpg"));
 		bout1.setPreferredSize(new Dimension(100,25));
+		bout1.setLayout(new FlowLayout(FlowLayout.LEFT));
 		DefaultTableCellRenderer centerRenderer= new DefaultTableCellRenderer();
 		centerRenderer.setHorizontalAlignment(JLabel.CENTER);
 		
 		for (int c=0; c<2;c++) 
 			table.getColumnModel().getColumn(c).setCellRenderer(centerRenderer);
 		
-			table.setPreferredScrollableViewportSize(new Dimension(480,520));
+			table.setPreferredScrollableViewportSize(new Dimension(510,520));
 			table.setFillsViewportHeight(true);
 			table.getColumnModel().getColumn(0).setPreferredWidth(10);
 			table.getColumnModel().getColumn(1).setPreferredWidth(90);
-			table.getColumnModel().getColumn(2).setPreferredWidth(270);
+			table.getColumnModel().getColumn(2).setPreferredWidth(300);
 		
 		title=new JLabel ("LISTE DES ETUDIANTS EN "+titre);
 		title.setHorizontalAlignment(JLabel.CENTER);
@@ -60,14 +62,14 @@ public class PanelList extends JPanel{
 		
 		title.setFont(font);
 		title.setPreferredSize(new Dimension(430,25));
-		this.setPreferredSize(new Dimension(490,620));
+		this.setPreferredSize(new Dimension(520,620));
 		tete.setPreferredSize(new Dimension(480,30));
 		ferme.setPreferredSize(new Dimension(30,25));
 		ferme.setIcon(new ImageIcon(ImageBonneQualite.scaleImage(40, 25, "/ferme.png")));
 		
 		tete.add(title);
 		tete.add(ferme);
-		this.add(tete);
+		//this.add(tete);
 		this.add(new JScrollPane(table));
 		this.add(bout1);
 		this.add(bout);

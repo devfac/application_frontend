@@ -45,8 +45,8 @@ import table.TableModel;
 @SuppressWarnings("serial")
 public class Inscription<tabcombo> extends JScrollPane{   
 	
-	public  String tite[]= {"Du","à","à l'E.E.S","Mention","Dipl.obtenu",
-								  "Du","à","à l'E.E.S","Mention","Dipl.obtenu",
+	public  String tite[]= {"Du","ï¿½","ï¿½ l'E.E.S","Mention","Dipl.obtenu",
+								  "Du","ï¿½","ï¿½ l'E.E.S","Mention","Dipl.obtenu",
 								  };
 	
 	public  String anneTab[]= {" ","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009",
@@ -57,37 +57,37 @@ public class Inscription<tabcombo> extends JScrollPane{
 	
 	
 	public  JLabel montant= new JLabel("MONTANT (AR) :");
-	public  JLabel numQuit= new JLabel("N°QUIT :");
+	public  JLabel numQuit= new JLabel("Nï¿½QUIT :");
 	public  JLabel dateQuit= new JLabel("DATE QUIT:");
 	
-	public  String serieTab[]= {"A1","A2","C","D","Tech.Génie civile",
-			                     "téchnique","Tech.Tertiaire","Tech.Agricole",
+	public  String serieTab[]= {"A1","A2","C","D","Tech.Gï¿½nie civile",
+			                     "tï¿½chnique","Tech.Tertiaire","Tech.Agricole",
 			                      "Technique","Autre"};
 	public  String nationaliteTab[]= {"","Malagasy","Africaine","Asiatique","Comorienne","Europeenne","Autres"};
-	public String situationTab[]= {" ","Célibataire","Marié(e)","Divorcé(e)","Veuf(ve)"};
+	public String situationTab[]= {" ","Cï¿½libataire","Mariï¿½(e)","Divorcï¿½(e)","Veuf(ve)"};
 	public  String sexeTab[]= {" ","Masculin","Feminin"};
 	
-	public  JLabel num=new JLabel("N°d'inscription : ");
+	public  JLabel num=new JLabel("Nï¿½d'inscription : ");
 	public  JLabel nom=new JLabel("NOM: ");
-	public  JLabel prenom=new JLabel("Prénom: ");
-	public  JLabel naiss=new JLabel("Né(é) le : ");
-	public  JLabel a1=new JLabel("à: ");
-	public  JLabel nation=new JLabel("Nationalité: ");
+	public  JLabel prenom=new JLabel("Prï¿½nom: ");
+	public  JLabel naiss=new JLabel("Nï¿½(ï¿½) le : ");
+	public  JLabel a1=new JLabel("ï¿½: ");
+	public  JLabel nation=new JLabel("Nationalitï¿½: ");
 	public  JLabel sexe=new JLabel("Sexe: ");
 	public  JLabel situation=new JLabel("Situation familiale: ");
-	public  JLabel numTel=new JLabel("N°Tel: ");
+	public  JLabel numTel=new JLabel("Nï¿½Tel: ");
 	public  JLabel cin=new JLabel("CIN: ");
-	public  JLabel delivre=new JLabel("Delivré le : ");
-	public  JLabel a2=new JLabel("à: ");
-	public  JLabel serieBacc=new JLabel("Série BACC : ");
-	public  JLabel anneBacc=new JLabel("Année d'obtention : ");
-	public  JLabel numBacc=new JLabel("N°du BACC : ");
+	public  JLabel delivre=new JLabel("Delivrï¿½ le : ");
+	public  JLabel a2=new JLabel("ï¿½: ");
+	public  JLabel serieBacc=new JLabel("Sï¿½rie BACC : ");
+	public  JLabel anneBacc=new JLabel("Annï¿½e d'obtention : ");
+	public  JLabel numBacc=new JLabel("Nï¿½du BACC : ");
 	public  JLabel centreBacc=new JLabel("Centre: ");
-	public  JLabel adresseEt=new JLabel("Adresse de l'étudiant : ");
+	public  JLabel adresseEt=new JLabel("Adresse de l'ï¿½tudiant : ");
 	public  JLabel professionEt=new JLabel("Profession : ");
-	public  JLabel nomPere=new JLabel("Nom du père : ");
+	public  JLabel nomPere=new JLabel("Nom du pï¿½re : ");
 	public  JLabel professionPere=new JLabel("Profession : ");
-	public  JLabel nomMere=new JLabel("Nom de la mère: ");
+	public  JLabel nomMere=new JLabel("Nom de la mï¿½re: ");
 	public  JLabel professionMere=new JLabel("Profession : ");
 	public  JLabel adressePa=new JLabel("Adresse des parents : ");
 	
@@ -160,7 +160,7 @@ public class Inscription<tabcombo> extends JScrollPane{
 	public  JLabel entete1=new JLabel(" FACULTE DES SCIENCES ");
 	public  JLabel entete2=new JLabel("CONNAISSANCE-EXCELLENCE-RIGUEUR ");
 	
-	public  JLabel enBas=new JLabel("Autre Université fréquanté dépuis l'obtention du Baccalauréat ");
+	public  JLabel enBas=new JLabel("Autre Universitï¿½ frï¿½quantï¿½ dï¿½puis l'obtention du Baccalaurï¿½at ");
 	public  JLabel logo1= new JLabel();
 	public  JLabel logo2= new JLabel();
 	public  JLabel image= new JLabel();
@@ -210,7 +210,7 @@ public class Inscription<tabcombo> extends JScrollPane{
 
 	public  JButton retour=new JButton("Retour");
 	public  DefaultTableModel model =new DefaultTableModel();
-	public  String title[]= {"N°Inscription","N°Carte"," Nom et Prenom "," Niveau "};
+	public  String title[]= {"Nï¿½Inscription","Nï¿½Carte"," Nom et Prenom "," Niveau "};
 	public  String mention;
 	public JTable table;
 	
@@ -692,7 +692,7 @@ public class Inscription<tabcombo> extends JScrollPane{
 						   
 							  }
 					 }
-					  JOptionPane.showMessageDialog(Main.main, "les étudiants sont bien ajoutés ", "",
+					  JOptionPane.showMessageDialog(Main.main, "les ï¿½tudiants sont bien ajoutï¿½s ", "",
 								JOptionPane.INFORMATION_MESSAGE);
 				} catch (Exception e) {
 				}
@@ -813,22 +813,8 @@ public class Inscription<tabcombo> extends JScrollPane{
 									JOptionPane.ERROR_MESSAGE); 
 						}
 						if(i==1){
-							/*DataBase.ajout_etudiant_math_parcours(Integer.parseInt(numTxt.getText()),"S1", "S2",mention);
-							DataBase.ajout_etudiant_math( Main.main,Integer.parseInt(
-									numTxt.getText()), 
-									nomEtTxt.getText().toUpperCase(),
-									Methode.finitText(prenomEtTxt.getText()), 
-									Methode.dateText(dateNaisTxt.getText()), 
-									Methode.finitText(lieuNaissTxt.getText()), 
-									adresseEtTxt.getText(), 
-									numCinTxt.getText(), 
-									Methode.dateText(dateCinTxt.getText()), 
-									Methode.finitText(lieuCinTxt.getText()), 
-									montantTxt.getText(), 
-									numQuitTxt.getText(), 
-									Methode.dateText(dateQuitTxt.getText()),"Passant","T.C.M", 
-									numTxt.getText());
-							*/
+			
+							
 									DataBase.ajout_etudiant_fac(
 									numTxt.getText(), 
 									nomEtTxt.getText().toUpperCase(),
@@ -872,32 +858,6 @@ public class Inscription<tabcombo> extends JScrollPane{
 									numTxt.setEnabled(true);
 						}else {
 							if(typefilComb.getSelectedIndex()!=0) {
-							/*switch(i) {
-							case 1:
-								DataBase.ajout_etudiant_math_parcours(Integer.parseInt(numTxt.getText()),"S1", "S2",mention);
-								break;
-							case 2:
-								DataBase.ajout_etudiant_math_parcours(Integer.parseInt(numTxt.getText()),"S7", "S8",mention);
-								break;
-							case 3:
-								DataBase.ajout_etudiant_math_parcours(Integer.parseInt(numTxt.getText()),"S9", "S10",mention);
-								break;
-							}
-						
-						DataBase.ajout_etudiant_math( Main.main,Integer.parseInt(
-									numTxt.getText()), 
-									nomEtTxt.getText().toUpperCase(),
-									Methode.finitText(prenomEtTxt.getText()), 
-									Methode.dateText(dateNaisTxt.getText()), 
-									Methode.finitText(lieuNaissTxt.getText()), 
-									adresseEtTxt.getText(), 
-									numCinTxt.getText(), 
-									Methode.dateText(dateCinTxt.getText()), 
-									Methode.finitText(lieuCinTxt.getText()), 
-									montantTxt.getText(), 
-									numQuitTxt.getText(), 
-									Methode.dateText(dateQuitTxt.getText()),"Passant",(String)typefilComb.getSelectedItem(), 
-									numTxt.getText());*/
 							
 									DataBase.ajout_etudiant_fac(
 									numTxt.getText(), 

@@ -16,30 +16,31 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import panel.Panneau;
 import data_base.DataBase;
 import image.LoadImage;
 import panel.PanelDroit;
 import table.TableModel;
+import image.ImageBonneQualite;
+
 
 public class AfficheDroit {
 
-	public static JPanel panelPrincipale1[];
+	public static Panneau  panelPrincipale1[];
+	public static JLabel logo2 [];
+	public static JPanel  panelPrincipale2[];
 	public static JPanel panel[];
 	public static JPanel panelList[];
 	public static JLabel titre[];
 	public static JLabel titre1[];
-	public static JPanel panelTabletcm[];
-	public static JPanel panelTablemiss[];
-	public static JPanel panelTableme[];
-	public static JPanel panelTablemf[];
+	public static JPanel panelTable[];
+	public static JPanel titlePanel[];
+
 	
 	public static JScrollPane scrollPane1;
 	
 	
-	public static JButton tcm[];
-	public static JButton miss[];
-	public static JButton me[];
-	public static JButton mf[];
+
 	
 	public static JButton acttcm[];
 	public static JButton actmiss[];
@@ -47,205 +48,118 @@ public class AfficheDroit {
 	public static JButton actmf[];
 	
 	
-	public static JTable tabletcm[];
-	public static JTable tablemiss[];
-	public static JTable tableme[];
-	public static JTable tablemf[];
+	public static JTable table[];
+	public static JTable tableParc[];
 	
 	
-	public static String niv[]= {"L1","L2","L3","M1","M2"};
+	public static String semestre[]= {"L1","L2","L3","M1","M2"};
 	
-	public static DefaultTableModel modeltcm[]= new DefaultTableModel[1];
-	public static DefaultTableModel modelmiss[]= new DefaultTableModel[10];
-	public static DefaultTableModel modelme[]= new DefaultTableModel[10];
-	public static DefaultTableModel modelmf[]= new DefaultTableModel[10];
+	public static DefaultTableModel modeltable[];
+	public static DefaultTableModel modelParc[];
+
 	
-	public static Font font=new Font("arial",Font.BOLD,16);
+	public static Font font=new Font("arial",Font.BOLD,24);
 	public static JTabbedPane panelPrincipale= new JTabbedPane();
 	public static JScrollPane scrollPane;
-	public static Double droit;
-	public static Double tranche;
 	
-	public static String titreTable[]= {"N°","N°Carte","Nom et Prenom ","Droit versé","Reste à payer"};
+	public static String titreTable[]= {"NÂ°","NÂ° Carte","Nom et Prenom ","Droit versÃ©","Reste Ã  payer"};
+	public static String titleParc[]= {"PARCOUR"};
+		
 		
 	public static void ajouter() {
-			tcm=new JButton[5];
-			miss=new JButton[5];
-			me=new JButton[5];
-			mf=new JButton[5];
 			
 			acttcm=new JButton[1];
 			actmiss=new JButton[5];
 			actme=new JButton[5];
 			actmf=new JButton[5];
 			
-			tabletcm=new JTable[1];
-			tablemiss=new JTable[5];
-			tableme=new JTable[5];
-			tablemf=new JTable[5];
+			table=new JTable[5];
+			tableParc= new JTable[5];
+			modelParc= new DefaultTableModel[5];
+			modeltable= new DefaultTableModel[5];
 			
-			panelPrincipale1=new JPanel[5];
+			panelPrincipale1=new Panneau[5];
+			panelPrincipale2=new JPanel[5];
 			panel=new JPanel[5];
 			
-			panelTabletcm=new JPanel[1];
-			panelTablemiss=new JPanel[5];
-			panelTableme=new JPanel[5];
-			panelTablemf=new JPanel[5];
-			
+			panelTable=new JPanel[5];
 			panelList=new JPanel[5];
 			titre=new JLabel[5];
 			titre1=new JLabel[5];
+			titlePanel=new JPanel[5];
+			logo2=new JLabel[5];
 			
 		for(int i=0;i<5;i++) {
-			tcm[i]=new JButton (LoadImage.transformeb(150, 25, "/tcm.jpg"));
-			miss[i]=new JButton (LoadImage.transformeb(150, 25, "/miss.jpg"));
-			me[i]=new JButton (LoadImage.transformeb(150, 25, "/me.jpg"));
-			mf[i]=new JButton (LoadImage.transformeb(150, 25, "/mf.jpg"));
 			
-			tcm[i].setPreferredSize(new Dimension(100,25));
-			miss[i].setPreferredSize(new Dimension(100,25));
-			me[i].setPreferredSize(new Dimension(100,25));
-			mf[i].setPreferredSize(new Dimension(100,25));
-			
-			panelPrincipale1[i]=new JPanel();
+			actmiss[i]=new JButton();
+			panelPrincipale1[i]=new Panneau("/fac.jpg");
+			panelPrincipale2[i]=new JPanel();
 			panel[i]=new JPanel();
 			panelList[i]=new JPanel();
+			titlePanel[i]=new JPanel();
 			
 			
-		
+			titre[i]=new JLabel("DROITS DES ETUDIANTS VERSER EN L"+(i+1)+" ");
+			titre1[i]=new JLabel("DROITS DES ETUDIANTS VERSER EN M"+(i-2)+" ");
+			titre[i].setFont(font);
+			titre1[i].setFont(font);
+            logo2[i]= new JLabel();
+			logo2[i].setIcon(ImageBonneQualite.image("C:/Program Files (x86)/JDev/DataSciences/image/logoFac.png",40));
+			logo2[i].setPreferredSize(new Dimension(40,40));
+
+
+			modelParc[i]=new TableModel(titleParc);
+			tableParc[i]=new JTable(modelParc[i]);
+			tableParc[i].setPreferredScrollableViewportSize(new Dimension(230,300));
+			tableParc[i].setFillsViewportHeight(true);
+
 			
-			tcm[i].setPreferredSize(new Dimension(130,25));
-			miss[i].setPreferredSize(new Dimension(130,25));
-			me[i].setPreferredSize(new Dimension(130,25));
-			mf[i].setPreferredSize(new Dimension(130,25));
 			
-			tcm[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			miss[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			me[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			mf[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			
-			panel[i].setPreferredSize(new Dimension(150,630));
-			panelList[i].setPreferredSize(new Dimension(990,630));
-			titre[i]=new JLabel("LISTE L"+(i+1)+" ");
-			titre1[i]=new JLabel("LISTE M"+(i-2)+" ");
-			
-			if(i<1) {
-				acttcm[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-				modeltcm[i]=new TableModel(titreTable);
-				modeltcm[i]=DataBase.importDonneDroitEt(modeltcm[i], "MATHEMATIQUES ET APPLICATIONS", niv[i],"T.C.M","L1_T.C.M");
-								tabletcm[i]=new JTable(modeltcm[i]);
-				panelTabletcm[i]= new PanelDroit(niv[i]+" T.C.M",tabletcm[i],acttcm[i],modeltcm[i]);
-				tcm[i].addActionListener(new Visible(i,panelTabletcm[i]));
-				acttcm[i].addActionListener(new Actualiser(modeltcm[i],niv[i],"T.C.M",tranche,i));
-				panelList[i].add(panelTabletcm[i]);
-				acttcm[i].setPreferredSize(new Dimension(100,25));
-				
-				miss[i].setEnabled(false);
-				me[i].setEnabled(false);
-				mf[i].setEnabled(false);
-				tcm[i].setEnabled(true);
-				panel[i].add(titre[i]);
-				
-			}else {
 				if(i<3) {
-				actmiss[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));	
-				modelmiss[i]=new TableModel(titreTable);
-				modelmiss[i]=DataBase.importDonneDroitEt(modelmiss[i], "MATHEMATIQUES ET APPLICATIONS", niv[i],"M.I.S.S","L"+i+"_M.I.S.S");
-			    tablemiss[i]=new JTable(modelmiss[i]);
-			    actmiss[i].setPreferredSize(new Dimension(100,25));
+				//actmiss[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));	
+				modeltable[i]=new TableModel(titreTable);
+				//modelmiss[i]=DataBase.importDonneBourse(modelmiss[i], "MATHEMATIQUES ET APPLICATIONS", semestre[i],"M.I.S.S");
+			    table[i]=new JTable(modeltable[i]);
 			    
-				panelTablemiss[i]= new PanelDroit(niv[i]+" M.I.S.S ",tablemiss[i],actmiss[i],modelmiss[i]);
-				miss[i].addActionListener(new Visible(i,panelTablemiss[i]));
-				actmiss[i].addActionListener(new Actualiser(modelmiss[i],niv[i],"M.I.S.S",tranche,i));
-			    panelList[i].add(panelTablemiss[i]); 
-			    
-			    actme[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-				modelme[i]=new TableModel(titreTable);
-				
-				modelme[i]=DataBase.importDonneDroitEt(modelme[i], "MATHEMATIQUES ET APPLICATIONS", niv[i],"M.E","L"+i+"_M.E");
-			    tableme[i]=new JTable(modelme[i]);
-			    actme[i].setPreferredSize(new Dimension(100,25));
-				
-				panelTableme[i]= new PanelDroit(niv[i]+" M.E ",tableme[i],actme[i],modelme[i]);
-				me[i].addActionListener(new Visible(i,panelTableme[i]));
-				actme[i].addActionListener(new Actualiser(modelme[i],niv[i],"M.E",tranche,i));
-			    panelList[i].add(panelTableme[i]); 
-			    
-			    actmf[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-				modelmf[i]=new TableModel(titreTable);
-				modelmf[i]=DataBase.importDonneDroitEt(modelmf[i], "MATHEMATIQUES ET APPLICATIONS",niv[i],"M.F","L"+i+"_M.F");
-			    tablemf[i]=new JTable(modelmf[i]);
-			    actmf[i].setPreferredSize(new Dimension(100,25));
-				
-				panelTablemf[i]= new PanelDroit(niv[i]+" M.F ",tablemf[i],actmf[i],modelmf[i]);
-				mf[i].addActionListener(new Visible(i,panelTablemf[i]));
-				actmf[i].addActionListener(new Actualiser(modelmf[i],niv[i],"M.F",tranche,i));
-			    panelList[i].add(panelTablemf[i]); 
+				panelTable[i]= new PanelDroit(semestre[i]+" M.I.S.S ",table[i],actmiss[i],modeltable[i]);
+			    panelList[i].add(panelTable[i]); 
+				actmiss[i].setVisible(false);
 				
 			
-				tcm[i].setEnabled(false);
-				miss[i].setEnabled(true);
-				me[i].setEnabled(true);
-				mf[i].setEnabled(true);
-				panel[i].add(titre[i]);
+				titlePanel[i].add(logo2[i]);
+				titlePanel[i].add(titre[i]);
 				
 				}else {
 					actmiss[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));	
-					modelmiss[i]=new TableModel(titreTable);
-					
-					modelmiss[i]=DataBase.importDonneDroitEt(modelmiss[i], "MATHEMATIQUES ET APPLICATIONS", niv[i],"M.I.S.S","M"+(i-2)+"_M.I.S.S");
-				    tablemiss[i]=new JTable(modelmiss[i]);
-				    actmiss[i].setPreferredSize(new Dimension(100,25));
+					modeltable[i]=new TableModel(titreTable);
+					//modelmiss[i]=DataBase.importDonneBourse(modelmiss[i], "MATHEMATIQUES ET APPLICATIONS", semestre[i],"M.I.S.S");
+				    table[i]=new JTable(modeltable[i]);
+					actmiss[i].setVisible(false);
 				    
-					panelTablemiss[i]= new PanelDroit(niv[i]+" M.I.S.S ",tablemiss[i],actmiss[i],modelmiss[i]);
-					miss[i].addActionListener(new Visible(i,panelTablemiss[i]));
-					actmiss[i].addActionListener(new Actualiser(modelmiss[i],niv[i],"M.I.S.S",tranche,i));
-				    panelList[i].add(panelTablemiss[i]); 
+					panelTable[i]= new PanelDroit(semestre[i]+" M.I.S.S ",table[i],actmiss[i],modeltable[i]);
+					//actmiss[i].addActionListener(new Actualiser(modelmiss[i],semestre[i],"M.I.S.S"));
+				    panelList[i].add(panelTable[i]); 
 				    
-				    actme[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-					modelme[i]=new TableModel(titreTable);
-					modelme[i]=DataBase.importDonneDroitEt(modelme[i], "MATHEMATIQUES ET APPLICATIONS", niv[i],"M.E","M"+(i-2)+"_M.E");
-				    tableme[i]=new JTable(modelme[i]);
-				    actme[i].setPreferredSize(new Dimension(100,25));
-					
-					panelTableme[i]= new PanelDroit(niv[i]+" M.E ",tableme[i],actme[i],modelme[i]);
-					me[i].addActionListener(new Visible(i,panelTableme[i]));
-					actme[i].addActionListener(new Actualiser(modelme[i],niv[i],"M.E",droit,i));
-				    panelList[i].add(panelTableme[i]); 
 				    
-				    actmf[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-					modelmf[i]=new TableModel(titreTable);
-					modelmf[i]=DataBase.importDonneDroitEt(modelmf[i], "MATHEMATIQUES ET APPLICATIONS",niv[i],"M.F","M"+(i-2)+"_M.F");
-				    tablemf[i]=new JTable(modelmf[i]);
-				    actmf[i].setPreferredSize(new Dimension(100,25));
-					
-					panelTablemf[i]= new PanelDroit(niv[i]+" M.F ",tablemf[i],actmf[i],modelmf[i]);
-					mf[i].addActionListener(new Visible(i,panelTablemf[i]));
-					actmf[i].addActionListener(new Actualiser(modelmf[i],niv[i],"M.F",tranche,i));
-				    panelList[i].add(panelTablemf[i]); 
-					
-				
-					tcm[i].setEnabled(false);
-					miss[i].setEnabled(true);
-					me[i].setEnabled(true);
-					mf[i].setEnabled(true);
-					panel[i].add(titre1[i]);
+					titlePanel[i].add(logo2[i]);
+					titlePanel[i].add(titre1[i]);
+
 				}
 			
-			}
 			
-			panel[i].add(tcm[i]);
-			panel[i].add(miss[i]);
 			
-			panel[i].add(me[i]);
-			panel[i].add(mf[i]);
-			
-			panelList[i].setLayout(new FlowLayout(FlowLayout.LEFT));
-			panelPrincipale1[i].setBackground(Color.cyan);
-			//model[i]=DataBase.crerTable(i+1,semestre[i], "",1, panelPrincipale1[i],panel[i],table,"Normal");
-			panelPrincipale1[i].add(panel[i]);
-			panelPrincipale1[i].add(panelList[i]);
-			panelPrincipale1[i].setLayout(new FlowLayout(FlowLayout.LEFT));
+				panel[i].setPreferredSize(new Dimension(300,630));
+				panelList[i].setPreferredSize(new Dimension(630,630));
+				titlePanel[i].setPreferredSize(new Dimension(940,45));
+				titlePanel[i].setBackground(Color.white);	
+				panelPrincipale2[i].setPreferredSize(new Dimension(940,680));
+				panelPrincipale2[i].setBackground(Color.gray);
+
+				panel[i].add(new JScrollPane(tableParc[i]));
+				panelPrincipale2[i].add(titlePanel[i]);
+				panelPrincipale1[i].add(panelPrincipale2[i]);
+				panelPrincipale2[i].add(panel[i]);
+				panelPrincipale2[i].add(panelList[i]);
 			
 			
 		
@@ -282,18 +196,14 @@ public class AfficheDroit {
 		DefaultTableModel model;
 		String sems;
 		String parc;
-		 Double droit;
-		 Double reste;
-		Actualiser(DefaultTableModel model,String sems,String parc,Double droit,int i){
+		Actualiser(DefaultTableModel model,String sems,String parc){
 			this.model=model;
 			this.sems=sems;
 			this.parc=parc;
-			this.droit=droit;
-			this.i=i;
 		}
 		public void actionPerformed(ActionEvent arg0) {
 			// TODO Auto-generated method stub
-			model=DataBase.importDonneDroitEt(model, "MATHEMATIQUES ET APPLICATIONS", sems, parc,String.valueOf(i));
+			model=DataBase.importDonneBourse(model, "MATHEMATIQUES ET APPLICATIONS", sems, parc);
 		}
 		
 	}

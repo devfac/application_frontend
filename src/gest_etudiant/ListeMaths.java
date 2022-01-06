@@ -7,6 +7,8 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -22,37 +24,27 @@ import loading.Main;
 import panel.FenetreListeAuExamen;
 import panel.PanelList;
 import table.TableModel;
+import panel.Panneau;
+import image.ImageBonneQualite;
 
 public class ListeMaths {
 
-	public static JPanel panelPrincipale1[];
+	//public static JPanel panelPrincipale1[];
+	public static JLabel logo2 [];
+	public static Panneau  panelPrincipale1[];
+	public static JPanel  panelPrincipale2[];
 	public static JPanel panel[];
+	public static JPanel titlePanel[];
 	public static JPanel panelList[];
 	public static JLabel titre[];
 	public static JPanel panelTabletcm[];
-	public static JPanel panelTablemiss[];
-	public static JPanel panelTableme[];
-	public static JPanel panelTablemf[];
 	
 	public static JScrollPane scrollPane1;
-	
-	
 	public static JButton tcm[];
-	public static JButton miss[];
-	public static JButton me[];
-	public static JButton mf[];
-	
-	public static JButton acttcm[];
-	public static JButton actmiss[];
-	public static JButton actme[];
-	public static JButton actmf[];
-	public static JButton listGroup[];
-	
-	
+	public static JButton acttcm[];		
 	public static JTable tabletcm[];
-	public static JTable tablemiss[];
-	public static JTable tableme[];
-	public static JTable tablemf[];
+	public static JTable tableParc[];
+	public static DefaultTableModel modelParc[];
 	
 	static String mention;
 	static String type;
@@ -66,155 +58,84 @@ public class ListeMaths {
 	public static String semestre[]= {"Semestre1","Semestre2","Semestre3","Semestre4","Semestre5",
 									"Semestre6","Semestre7","Semestre8","Semestre9","Semestre10"};
 	
-	public static DefaultTableModel modeltcm[]= new DefaultTableModel[1];
-	public static DefaultTableModel modelmiss[]= new DefaultTableModel[10];
-	public static DefaultTableModel modelme[]= new DefaultTableModel[10];
-	public static DefaultTableModel modelmf[]= new DefaultTableModel[10];
+	public static DefaultTableModel modeltcm[]= new DefaultTableModel[10];
 	
-	public static Font font=new Font("arial",Font.BOLD,16);
+	public static Font font=new Font("arial",Font.BOLD,32);
 	public static JTabbedPane panelPrincipale= new JTabbedPane();
 	public static JScrollPane scrollPane;
 	
-	public static String titreTable[]= {"N°","N°Carte","Nom et Prenom "};
+	public static String titreTable[]= {"NÂ°","NÂ° Carte","Nom et Prenom "};
+	public static String titleParc[]= {"PARCOUR"};
 		
 	public static void ajouter() {
-			tcm=new JButton[10];
-			miss=new JButton[10];
-			me=new JButton[10];
-			mf=new JButton[10];
-			
-			acttcm=new JButton[1];
-			actmiss=new JButton[10];
-			actme=new JButton[10];
-			actmf=new JButton[10];
-			listGroup=new JButton[10];
-			
-			tabletcm=new JTable[1];
-			tablemiss=new JTable[10];
-			tableme=new JTable[10];
-			tablemf=new JTable[10];
-			
-			panelPrincipale1=new JPanel[10];
+			tcm=new JButton[10];		
+			acttcm=new JButton[10];
+			tabletcm=new JTable[10];
+			tableParc= new JTable[10];
+			modelParc= new DefaultTableModel[10];
+			panelPrincipale1=new Panneau[10];
+			panelPrincipale2=new JPanel[10];
 			panel=new JPanel[10];
-			
-			panelTabletcm=new JPanel[1];
-			panelTablemiss=new JPanel[10];
-			panelTableme=new JPanel[10];
-			panelTablemf=new JPanel[10];
-			
+			titlePanel=new JPanel[10];
+			panelTabletcm=new JPanel[10];
 			panelList=new JPanel[10];
 			titre=new JLabel[10];
+			logo2=new JLabel[10];
 			
 		for(int i=0;i<10;i++) {
-			tcm[i]=new JButton (LoadImage.transformeb(150, 25, "/tcm.jpg"));
-			miss[i]=new JButton (LoadImage.transformeb(150, 25, "/miss.jpg"));
-			me[i]=new JButton (LoadImage.transformeb(150, 25, "/me.jpg"));
-			mf[i]=new JButton (LoadImage.transformeb(150, 25, "/mf.jpg"));
-			
-			tcm[i].setPreferredSize(new Dimension(100,25));
-			miss[i].setPreferredSize(new Dimension(100,25));
-			me[i].setPreferredSize(new Dimension(100,25));
-			mf[i].setPreferredSize(new Dimension(100,25));
-			
-			panelPrincipale1[i]=new JPanel();
+			//panelPrincipale1[i]=new JPanel();
+			panelPrincipale1[i]=new Panneau("/fac.jpg");
+			panelPrincipale2[i]=new JPanel();
 			panel[i]=new JPanel();
 			panelList[i]=new JPanel();
-			
+			titlePanel[i]=new JPanel();
+			titre[i]=new JLabel("LISTE  DES ETUDIANTS INSCRIT EN S"+(i+1)+" ");
+			titre[i].setFont(font);
+            logo2[i]= new JLabel();
+			logo2[i].setIcon(ImageBonneQualite.image("C:/Program Files (x86)/JDev/DataSciences/image/logoFac.png",40));
+			logo2[i].setPreferredSize(new Dimension(40,40));
+
+			modelParc[i]=new TableModel(titleParc);
+			tableParc[i]=new JTable(modelParc[i]);
+			tableParc[i].setPreferredScrollableViewportSize(new Dimension(230,300));
+		//	tableParc[i].getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
+			tableParc[i].setFillsViewportHeight(true);
+		//	tableParc[i].getColumnModel().getColumn(0).setPreferredWidth(190);
+		//  tableParc[i].addMouseListener(new actue(i));
 			
 		
-			
-			tcm[i].setPreferredSize(new Dimension(130,25));
-			miss[i].setPreferredSize(new Dimension(130,25));
-			me[i].setPreferredSize(new Dimension(130,25));
-			mf[i].setPreferredSize(new Dimension(130,25));
-			
-			tcm[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			miss[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			me[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			mf[i].setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			
-			panel[i].setPreferredSize(new Dimension(150,630));
-			panelList[i].setPreferredSize(new Dimension(990,630));
-			titre[i]=new JLabel("LISTE S"+(i+1)+" ");
-			
-			if(i<1) {
-				acttcm[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-				listGroup[i]= new JButton("List Group");
-				modeltcm[i]=new TableModel(titreTable);
-				modeltcm[i]=DataBase.importDonneTable(modeltcm[i], "MATHEMATIQUES ET APPLICATIONS", "S"+(i+1),"T.C.M"); //ligne 468 data base
-				tabletcm[i]=new JTable(modeltcm[i]);
-				panelTabletcm[i]= new PanelList("S"+(i+1)+" T.C.M",tabletcm[i],acttcm[i],modeltcm[i]);
-				//panelTabletcm[i].add(listGroup[i]);
-				tcm[i].addActionListener(new Visible(i,panelTabletcm[i]));
-				acttcm[i].addActionListener(new Actualiser(modeltcm[i],"S"+(i+1),"T.C.M"));
-				panelList[i].add(panelTabletcm[i]);
-				acttcm[i].setPreferredSize(new Dimension(100,25));
-				
-				miss[i].setEnabled(false);
-				me[i].setEnabled(false);
-				mf[i].setEnabled(false);
-				tcm[i].setEnabled(true);
-				
-			}else {
-				actmiss[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-				listGroup[i]= new JButton("List Group");
-				modelmiss[i]=new TableModel(titreTable);
-				modelmiss[i]=DataBase.importDonneTable(modelmiss[i], "MATHEMATIQUES ET APPLICATIONS", "S"+(i+1),"M.I.S.S");
-			    tablemiss[i]=new JTable(modelmiss[i]);
-			    actmiss[i].setPreferredSize(new Dimension(100,25));
-			    
-				panelTablemiss[i]= new PanelList("S"+(i+1)+" M.I.S.S ",tablemiss[i],actmiss[i],modelmiss[i]);
-				//panelTablemiss[i].add(listGroup[i]);
-				miss[i].addActionListener(new Visible(i,panelTablemiss[i]));
-				actmiss[i].addActionListener(new Actualiser(modelmiss[i],"S"+(i+1),"M.I.S.S"));
-				listGroup[i].addActionListener(new ImprimerListGroup());
-			    panelList[i].add(panelTablemiss[i]); 
-			    
-			    actme[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-				modelme[i]=new TableModel(titreTable);
-				modelme[i]=DataBase.importDonneTable(modelme[i], "MATHEMATIQUES ET APPLICATIONS", "S"+(i+1),"M.E");
-			    tableme[i]=new JTable(modelme[i]);
-			    actme[i].setPreferredSize(new Dimension(100,25));
-				
-				panelTableme[i]= new PanelList("S"+(i+1)+" M.E ",tableme[i],actme[i],modelme[i]);
-				me[i].addActionListener(new Visible(i,panelTableme[i]));
-				actme[i].addActionListener(new Actualiser(modelme[i],"S"+(i+1),"M.E"));
-				listGroup[i].addActionListener(new ImprimerListGroup());
-			    panelList[i].add(panelTableme[i]); 
-			    
-			    actmf[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
-				modelmf[i]=new TableModel(titreTable);
-				modelmf[i]=DataBase.importDonneTable(modelmf[i], "MATHEMATIQUES ET APPLICATIONS", "S"+(i+1),"M.F");
-			    tablemf[i]=new JTable(modelmf[i]);
-			    actmf[i].setPreferredSize(new Dimension(100,25));
-				
-				panelTablemf[i]= new PanelList("S"+(i+1)+" M.F ",tablemf[i],actmf[i],modelmf[i]);
-				mf[i].addActionListener(new Visible(i,panelTablemf[i]));
-				actmf[i].addActionListener(new Actualiser(modelmf[i],"S"+(i+1),"M.F"));
-				listGroup[i].addActionListener(new ImprimerListGroup());
-			    panelList[i].add(panelTablemf[i]); 
+			acttcm[i]=new JButton( LoadImage.transformeb(100, 25, "/actualiser.jpg"));
+			modeltcm[i]=new TableModel(titreTable);
+			modeltcm[i]=DataBase.importDonneTable(modeltcm[i], "MATHEMATIQUES ET APPLICATIONS", "S"+(i+1),"T.C.M");
+			tabletcm[i]=new JTable(modeltcm[i]);
+			panelTabletcm[i]= new PanelList("S"+(i+1)+" T.C.M",tabletcm[i],acttcm[i],modeltcm[i]);
+
+
+			panelList[i].add(panelTabletcm[i]);
+			acttcm[i].setPreferredSize(new Dimension(100,25));
+			acttcm[i].setVisible(false);
 				
 			
-				tcm[i].setEnabled(false);
-				miss[i].setEnabled(true);
-				me[i].setEnabled(true);
-				mf[i].setEnabled(true);
-				
-			}
+			panelPrincipale2[i].setPreferredSize(new Dimension(910,680));
+			panelPrincipale2[i].setBackground(Color.gray);
+			titlePanel[i].setPreferredSize(new Dimension(910,45));
+			titlePanel[i].setBackground(Color.white);
+			panel[i].setPreferredSize(new Dimension(300,630));
+			//panel[i].setOpaque(false);
+			panelList[i].setPreferredSize(new Dimension(600,630));
+			//panelList[i].setOpaque(false);
 			
-			panel[i].add(titre[i]);
-			panel[i].add(tcm[i]);
-			panel[i].add(miss[i]);
+			titlePanel[i].add(logo2[i]);
+			titlePanel[i].add(titre[i]);
+			panel[i].add(new JScrollPane(tableParc[i]));
 			
-			panel[i].add(me[i]);
-			panel[i].add(mf[i]);
-			
-			panelList[i].setLayout(new FlowLayout(FlowLayout.LEFT));
-			panelPrincipale1[i].setBackground(Color.cyan);
-			//model[i]=DataBase.crerTable(i+1,semestre[i], "",1, panelPrincipale1[i],panel[i],table,"Normal");
-			panelPrincipale1[i].add(panel[i]);
-			panelPrincipale1[i].add(panelList[i]);
-			panelPrincipale1[i].setLayout(new FlowLayout(FlowLayout.LEFT));
+			//panelList[i].setLayout(new FlowLayout(FlowLayout.LEFT));
+			//panelPrincipale1[i].setBackground(Color.white);
+			panelPrincipale2[i].add(titlePanel[i]);
+			panelPrincipale1[i].add(panelPrincipale2[i]);
+			panelPrincipale2[i].add(panel[i]);
+			panelPrincipale2[i].add(panelList[i]);
+		
 			
 			
 		
@@ -222,14 +143,12 @@ public class ListeMaths {
 		
 		
 		
-		//model[0]=DataBase.crerTable(1,semestre[0], "",0, panelPrincipale1[0],panel[0],table,"Normal");
 		
 		JPanel tPan[]= panelPrincipale1;
 		scrollPane = new JScrollPane(panelPrincipale);
-		//scrollPane.setBounds( 00 , 00, 1250 , 650);
 		int i = 0;
 		for(JPanel pan : tPan){
-		//Méthode d'ajout d'onglet
+		//Mï¿½thode d'ajout d'onglet
 		panelPrincipale.add("SEMESTRE "+(++i), pan);
 	}
 	}
@@ -274,6 +193,28 @@ public class ListeMaths {
 			new FenetreListeAuExamen(Main.main," RESULTAT ", true,mention,t,type,parcours,nbrSems,debutSems,sems,post).setVisible(true);
 			Main.main.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		}
+		
+	}
+
+	public  class actue implements MouseListener{
+		int i;
+		actue(int i){
+			this.i=i;
+		}
+		@Override
+		public void mouseClicked(MouseEvent e) {
+		 if(tableParc[i].getRowCount()>0 && tableParc[i].getSelectedRow()!=-1) {
+				
+			if(e.getClickCount()==2) {
+			
+				//ACTION IMPORT DONNER
+			}
+		 }
+		}
+		public void mouseEntered(MouseEvent arg0) {}
+		public void mouseExited(MouseEvent arg0) {}
+		public void mousePressed(MouseEvent arg0) {}
+		public void mouseReleased(MouseEvent arg0) {}
 		
 	}
 	

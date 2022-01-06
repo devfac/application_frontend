@@ -19,13 +19,14 @@ public  class CliqueSouris {
 			
 			@Override
 			public void mouseEntered(MouseEvent arg0) {
-				LoginPrincipale.change.setForeground(Color.white);
+				LoginPrincipale.change.setForeground(Color.blue);
 			}
 			
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				LoginPrincipale.panAnne.setVisible(true);
 				LoginPrincipale.panAnne1.setVisible(false);
+				LoginPrincipale.mentionPanel.setVisible(false);
 			}
 		});
 			
@@ -39,21 +40,44 @@ public  class CliqueSouris {
 			
 			@Override
 			public void mouseEntered(MouseEvent arg0) {
-				LoginPrincipale.nouv.setForeground(Color.white);
+				LoginPrincipale.nouv.setForeground(Color.blue);
 			}
 			
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				LoginPrincipale.panAnne1.setVisible(true);
 				LoginPrincipale.panAnne.setVisible(false);
+				LoginPrincipale.mentionPanel.setVisible(false);
 			}
 		});
-		
+		LoginPrincipale.mentionLabel.addMouseListener(new MouseAdapter() {
+			
+			@Override
+			public void mouseExited(MouseEvent arg0) {
+				LoginPrincipale.mentionLabel.setForeground(Color.black);
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent arg0) {
+				LoginPrincipale.mentionLabel.setForeground(Color.blue);
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				LoginPrincipale.panAnne1.setVisible(false);
+				LoginPrincipale.panAnne.setVisible(false);
+				LoginPrincipale.mentionPanel.setVisible(true);
+
+			}
+		});		
+
+
 		LoginPrincipale.panelPrincipale.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				LoginPrincipale.panAnne1.setVisible(false);
 				LoginPrincipale.panAnne.setVisible(false);
+				LoginPrincipale.mentionPanel.setVisible(false);
 			}
 		});
 		
