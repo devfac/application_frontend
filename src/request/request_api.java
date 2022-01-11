@@ -77,18 +77,15 @@ public static JSONArray get_anne_univ() throws IOException{
 	JSONArray jsonObject = new JSONArray(response.toString());
 	return jsonObject;
 }
-public static JSONArray get_Mention(String mention) throws IOException{
-	String request = "http://"+Main.host+"/api/v1/mentions";
-	String urlParameters  = "title="+mention;
-	byte[] getData = urlParameters.getBytes( StandardCharsets.UTF_8 );
-	URL url = new URL( request );
+
+
+public static JSONObject get_Mention_by_uuid(String uuid) throws IOException{
+	URL url = new URL("http://"+Main.host+"/api/v1/mentions/by_uuid?uuid="+uuid);
 	HttpURLConnection conn= (HttpURLConnection) url.openConnection(); 
+
 		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Authorization","Bearer "+Main.token);
 		conn.setRequestProperty("Content-Type","application/json"); 
-		try(DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
-			wr.write( getData );
-			}
 
 		BufferedReader in =new BufferedReader(new InputStreamReader(conn.getInputStream()));
 		String output;
@@ -97,8 +94,7 @@ public static JSONArray get_Mention(String mention) throws IOException{
 			response.append(output); 
 		}
 		in.close();
-		//System.out.println(response.toString());
-		JSONArray jsonObject = new JSONArray (response.toString());
+		JSONObject jsonObject = new JSONObject (response.toString());
 		return jsonObject;	
 		
 }

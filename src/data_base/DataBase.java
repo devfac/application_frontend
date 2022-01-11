@@ -27,6 +27,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 
 import gest_note.Calcule;
 import image.ImageBonneQualite;
@@ -2384,6 +2385,26 @@ public class DataBase{
 		String l[]=new String[list_anne.length()];
 		for (int i=0; i< l.length;i++){
 			l[i]=list_anne.getJSONObject(i).getString("title");
+		}
+			combo=new JComboBox<String>(l);
+			
+		return combo;
+	}
+
+
+	public static JComboBox<String>   recuperMention (){
+		JComboBox<String> combo=new JComboBox<>();
+		String l[]=new String[Main.listUuidMention.length()];
+		for (int i=0; i< l.length;i++){
+			try {
+				l[i]=request_api.get_Mention_by_uuid(Main.listUuidMention.getString(i)).getString("title");
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 			combo=new JComboBox<String>(l);
 			

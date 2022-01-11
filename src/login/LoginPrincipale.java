@@ -479,6 +479,7 @@ public class LoginPrincipale{
 	public static void ajoutAu() {	
 	new DataBase();
 	typeAn=DataBase.recuperAU();
+	mentionComboBox = DataBase.recuperMention();
 	typeAn.setPreferredSize(new Dimension(90,20));
 	panAnne.setPreferredSize(new Dimension(100,30));
 	anneField.setText((String)typeAn.getSelectedItem());

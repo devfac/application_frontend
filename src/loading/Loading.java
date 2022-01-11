@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -26,6 +27,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import request.request_api;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 
@@ -168,6 +171,10 @@ import panel.Panneau8;
 						control_vide.setVisible(true);
 						Main.token = response.getString("access_token");
 						Main.role = response.getString("role");
+						Main.listUuidMention = response.getJSONArray("mention");
+						for (int i=0;i<Main.listMention.size();i++){
+							System.out.println(Main.listMention.get(i));
+						}
 						launch_app();
 						request_api.get_anne_univ();
 						

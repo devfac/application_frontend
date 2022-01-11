@@ -10,6 +10,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.swing.JFormattedTextField;
@@ -20,6 +21,8 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.text.DateFormatter;
 import javax.swing.text.DefaultFormatterFactory;
+
+import org.json.JSONArray;
 
 import image.ImageBonneQualite;
 import login.LoginPrincipale;
@@ -32,10 +35,12 @@ import login.LoginPrincipale;
 		public static JFrame main=new JFrame();
 		public static int l=0;
 		public static String mention = "";
+		static ArrayList<String> listMention = new ArrayList<String>(); 
+		public static JSONArray listUuidMention = new JSONArray(); 
 		public static String token = "";
 		public static String role = "";
 		public static String code = "";
-		public static String host = "192.168.88.10";
+		public static String host = "192.168.88.35";
 		public Main() {
 			JPanel an=new JPanel();
 			DateFormat displayFormat= new SimpleDateFormat("dd MMMM YYYY");
