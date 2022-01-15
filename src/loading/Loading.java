@@ -26,6 +26,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import request.request_api;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 
@@ -168,6 +170,10 @@ import panel.Panneau8;
 						control_vide.setVisible(true);
 						Main.token = response.getString("access_token");
 						Main.role = response.getString("role");
+						int taille_mention = response.getJSONArray("mention").length();
+						String[] mention = new String[taille_mention];
+						System.out.println(response.getJSONArray("mention"));
+						
 						launch_app();
 						request_api.get_anne_univ();
 						

@@ -19,9 +19,11 @@ public class request_api {
     public static JSONObject login(String request,String username, String password) throws IOException, URISyntaxException, InterruptedException {
 		String urlParameters  = "username="+username+"&password="+password;
 
+		//String urlParameters  = "username=admin@science.com&password=aze135azq35sfsnf6353sfh3xb68yyp31gf68k5sf6h3s5d68jd5";
+
 		byte[] postData = urlParameters.getBytes( StandardCharsets.UTF_8 );
 		int postDataLength = postData.length;
-		URL url = new URL( request );
+		URL url = new URL(request);
 		InputStream inputStream;
 		HttpURLConnection conn= (HttpURLConnection) url.openConnection();           
 		conn.setDoOutput(true);
@@ -33,6 +35,7 @@ public class request_api {
 		conn.setUseCaches(false);
 		try(DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
 		wr.write( postData );
+		System.out.println(wr.toString());
 		}
 		int responseCode = conn.getResponseCode();
 		if (200 <= responseCode && responseCode <= 299) {
@@ -52,6 +55,7 @@ public class request_api {
 			response.append(currentLine);
 	
 		in.close();
+	
 		JSONObject jsonObject = new JSONObject(response.toString());
 	return jsonObject;
 }
