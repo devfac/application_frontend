@@ -2119,7 +2119,7 @@ public class DataBase{
 
 	}
 
-	public DefaultTableModel importDonneIns(DefaultTableModel model,String mention) {
+/*	public DefaultTableModel importDonneIns(DefaultTableModel model,String mention) {
 		model.setRowCount(0);
 		try {
 			String url = "jdbc:postgresql://"+port+":5432/"+database;
@@ -2142,6 +2142,27 @@ public class DataBase{
 			e.printStackTrace();
 		}
 
+		return model;
+	}*/
+	public DefaultTableModel  importDonneIns (DefaultTableModel model){
+		model.setRowCount(0);
+		String l[]=new String[Main.listnumInsc.length()];
+		for (int i=0; i< l.length;i++){
+			try {
+				model.addRow(new Object[] {request_api.get_etudiantIns_by_num_ins(Main.listnumInsc.getString(i)).getString("num_insc"),
+				Methode.numCarte(recuper_carte(LoginPrincipale.anneField.getText()), model.getRowCount()),
+				request_api.get_etudiantIns_by_num_ins(Main.listnumInsc.getString(i)).getString("nom")+" "
+				+request_api.get_etudiantIns_by_num_ins(Main.listnumInsc.getString(i)).getString("prenom"),
+				request_api.get_etudiantIns_by_num_ins(Main.listnumInsc.getString(i)).getString("niveau")});
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+			
 		return model;
 	}
 

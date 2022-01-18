@@ -102,15 +102,16 @@ public static JSONObject get_Mention_by_uuid(String uuid) throws IOException{
 
 ///////////////////////////////////////////INSCRIPTION////////////////////////////////////////////
 
+//POST//
 
 public static JSONObject enregInsription(String request,String num_insc, String nom,String prenom,
 String date_naiss,String lieu_naiss,String nation,String sexe,String situation,String num_tel,
-String num_cin,String date_cin,String lieu_cin,String bacc_serie,String bacc_anne,String bacc_centre,
+String num_cin,String date_cin,String lieu_cin,String bacc_serie,String bacc_anne,String bacc_num,String bacc_centre,
 String adress,String proffession,String nom_pere,String prof_pere,String nom_mere,String prof_mere,
 String adress_parent,String photo,String montant,String num_quitance,String date_quitance,
 String niveau,String parcours,String mention) throws IOException, URISyntaxException, InterruptedException {
 	String urlParameters  = "num_insc="+num_insc+"&nom="+nom+"&prenom="+prenom+"&date_naiss="+date_naiss+"&lieu_naiss="+lieu_naiss+"&nation="+nation
-	+"&sexe="+sexe+"&situation="+situation+"&num_tel="+num_tel+"&num_cin="+num_cin+"&date_cin="+date_cin+"&lieu_cin="+lieu_cin+"&bacc_serie="+bacc_serie+"&bacc_anne="+bacc_anne
+	+"&sexe="+sexe+"&situation="+situation+"&num_tel="+num_tel+"&num_cin="+num_cin+"&date_cin="+date_cin+"&lieu_cin="+lieu_cin+"&bacc_serie="+bacc_serie+"&bacc_anne="+bacc_anne+"&bacc_num="+bacc_num
 	+"&bacc_centre="+bacc_centre+"&adress="+adress+"&proffession="+proffession+"&nom_pere="+nom_pere+"&prof_pere="+prof_pere+"&nom_mere="+nom_mere+"&prof_mere="+prof_mere+"&adress_parent="+adress_parent
 	+"&photo="+photo+"&montant="+montant+"&num_quitance="+num_quitance+"&date_quitance="+date_quitance+"&niveau="+niveau+"&parcours="+parcours+"&mention="+mention;
 
@@ -144,6 +145,27 @@ String niveau,String parcours,String mention) throws IOException, URISyntaxExcep
 return jsonObject;
 }
 
+//GET//
+
+public static JSONObject get_etudiantIns_by_num_ins(String num_insc) throws IOException{
+	URL url = new URL("http://"+Main.host+"/api/v1/nouveau_etudiants/by_num_insc?num_insc="+num_insc);
+	HttpURLConnection conn= (HttpURLConnection) url.openConnection(); 
+
+		conn.setRequestMethod("GET");
+		conn.setRequestProperty("Authorization","Bearer "+Main.token);
+		conn.setRequestProperty("Content-Type","application/json"); 
+
+		BufferedReader in =new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		String output;
+		StringBuffer response= new StringBuffer();
+		while((output=in.readLine()) !=null){
+			response.append(output); 
+		}
+		in.close();
+		JSONObject jsonObject = new JSONObject(response.toString());
+		return jsonObject;	
+		
+}
 
 
 

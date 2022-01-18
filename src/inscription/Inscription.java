@@ -11,6 +11,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -41,6 +43,9 @@ import loading.Main;
 import loading.Methode;
 import login.LoginPrincipale;
 import table.TableModel;
+import request.request_api;
+import org.json.JSONObject;
+
 
 @SuppressWarnings("serial")
 public class Inscription<tabcombo> extends JScrollPane{   
@@ -228,7 +233,7 @@ public class Inscription<tabcombo> extends JScrollPane{
 			typefilComb=typefilCombMaths;
 			break;
 		}
-		model=new DataBase().importDonneIns(model,mention);
+		model=new DataBase().importDonneIns(model);
 		table =new JTable(model);
 		for (int c=0; c<4;c++) {
 			if(c!=2)
@@ -703,7 +708,7 @@ public class Inscription<tabcombo> extends JScrollPane{
 		
 		actual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				model=new DataBase().importDonneIns(model,mention);
+				model=new DataBase().importDonneIns(model);
 			}
 		});
 		
@@ -792,7 +797,7 @@ public class Inscription<tabcombo> extends JScrollPane{
 								 , numTxt, numCinTxt, montantTxt, numQuitTxt, dateQuitTxt, serieBox
 								 , situationBox, nationBox,anneBox, sexeBox,typeEt
 								 ,typefilComb, txtTab2, txtTab3);
-						model=new DataBase().importDonneIns(model,mention);
+						model=new DataBase().importDonneIns(model);
 						
 					}
 				}
@@ -802,112 +807,136 @@ public class Inscription<tabcombo> extends JScrollPane{
 		 //ACTION D'ENREGISTREMENT 
 		enreg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-					if(Methode.valideIns( mention, numTxt.getText(), typeEt,
+				String request = "http://"+Main.host+"/api/v1/nouveau_etudiants";
+							String num_insc = numTxt.getText();
+							String nom = nomEtTxt.getText().toUpperCase();
+							String prenom = Methode.finitText(prenomEtTxt.getText());
+							String date_naiss =  Methode.dateText(dateNaisTxt.getText());
+							String lieu_naiss = Methode.finitText(lieuNaissTxt.getText());
+							String nation = (String)nationBox.getSelectedItem();
+							String sexe = (String)sexeBox.getSelectedItem();
+							String situation = (String)situationBox.getSelectedItem();
+							String num_tel = numTelTxt.getText();
+							String num_cin = numCinTxt.getText();
+							String date_cin = Methode.dateText(dateCinTxt.getText());
+							String lieu_cin = Methode.finitText(lieuCinTxt.getText());
+							String bacc_serie = (String)serieBox.getSelectedItem();
+							String bacc_anne = (String)anneBox.getSelectedItem();
+							String bacc_num = numBaccTxt.getText();
+							String bacc_centre = centreBaccTxt.getText(); 
+							String adress = adresseEtTxt.getText();
+							String proffession = professionEtTxt.getText();
+							String nom_pere = nomPereTxt.getText();
+							String prof_pere = professionPereTxt.getText();
+							String nom_mere = nomMereTxt.getText();
+							String prof_mere = professionMereTxt.getText();
+							String adress_parent = adressePaTxt.getText();
+							String photo = "sary";
+							String montant = montantTxt.getText();
+							String num_quitance = numQuitTxt.getText();
+							String date_quitance = Methode.dateText(dateQuitTxt.getText());
+							String niveau = (String)typeEt.getSelectedItem();
+							String parcours = (String)typefilComb.getSelectedItem();
+							String mention = (String)LoginPrincipale.mentionComboBox.getSelectedItem();								     								 
+
+							if(Methode.valideIns( mention, numTxt.getText(), typeEt,
 							  nomEtTxt, dateNaisTxt, lieuNaissTxt, adresseEtTxt
 							 , numCinTxt,dateCinTxt, lieuCinTxt, montantTxt
 							 , numQuitTxt, dateQuitTxt)){
-						int i=typeEt.getSelectedIndex();
-						if(i==0){
+								int i=typeEt.getSelectedIndex();
+							if(i==0){
 						
 							JOptionPane.showMessageDialog(Main.main, " AUCUN NIVEAU CHOISIR  ", "ERREUR",
 									JOptionPane.ERROR_MESSAGE); 
-						}
-						if(i==1){
-			
-							
-									DataBase.ajout_etudiant_fac(
-									numTxt.getText(), 
-									nomEtTxt.getText().toUpperCase(),
-								    Methode.finitText(prenomEtTxt.getText()), 
-								    Methode.dateText(dateNaisTxt.getText()), 
-									Methode.finitText(lieuNaissTxt.getText()),
-									(String)nationBox.getSelectedItem(),
-									(String)sexeBox.getSelectedItem(),
-									(String)situationBox.getSelectedItem(),
-									numTelTxt.getText(),
-									numCinTxt.getText(), 
-									Methode.dateText(dateCinTxt.getText()), 
-									Methode.finitText(lieuCinTxt.getText()),
-									(String)serieBox.getSelectedItem(),
-									(String)anneBox.getSelectedItem(),
-									numBaccTxt.getText(),
-									centreBaccTxt.getText(), 
-									adresseEtTxt.getText(), 
-									professionEtTxt.getText(), 
-									nomPereTxt.getText(), 
-									professionPereTxt.getText(), 
-									nomMereTxt.getText(),
-									professionMereTxt.getText(),
-									adressePaTxt.getText(), 
-									numTxt.getText(),montantTxt.getText(),
-									numQuitTxt.getText(),
-									Methode.dateText(dateQuitTxt.getText()),
-									(String)typeEt.getSelectedItem(),"T.C.M",mention);
-									model=new DataBase().importDonneIns(model,mention);
+								}
+							if(i==1){
+								try {
+									JSONObject response = request_api.enregInsription(request,num_insc,nom,prenom,date_naiss,
+									lieu_naiss, nation, sexe, situation, num_tel,num_cin, date_cin, lieu_cin, bacc_serie,
+									bacc_anne, bacc_num, bacc_centre,adress, proffession, nom_pere, prof_pere, nom_mere,
+									prof_mere, adress_parent, photo, montant, num_quitance, date_quitance, niveau, parcours, mention);
+									if (response.has("detail")){
+										JOptionPane.showMessageDialog(Main.main, response.get("detail"), "Erreur",
+											JOptionPane.ERROR_MESSAGE);
+									}else{
+										  Main.token = response.getString("access_token");
+									 	  Main.role = response.getString("role");
+										  JOptionPane.showMessageDialog(Main.main, " ETUDIANT BIEN AJOUTER  ", "",
+										  JOptionPane.INFORMATION_MESSAGE); 
+										  model=new DataBase().importDonneIns(model);
+										  Methode.renitial( txtTab1, numBaccTxt, numTelTxt, dateNaisTxt
+									 	     ,numTxt, numCinTxt, montantTxt, numQuitTxt,dateQuitTxt, serieBox
+									 	     ,situationBox, nationBox, anneBox, sexeBox, typeEt
+										     , typefilComb,fil, table,txtTab2,txtTab3, image);
+										  Methode.enable1(txtTab1, numBaccTxt, numTelTxt, dateNaisTxt
+											 , numTxt, numCinTxt, montantTxt, numQuitTxt, dateQuitTxt, serieBox
+											 , situationBox, nationBox,anneBox, sexeBox,typeEt
+											 ,typefilComb, txtTab2, txtTab3);
+										  numTxt.setEnabled(true);
 									
-									JOptionPane.showMessageDialog(Main.main, " ETUDIANT BIEN AJOUTER  ", "",
-											JOptionPane.INFORMATION_MESSAGE); 
-									Methode.renitial( txtTab1, numBaccTxt, numTelTxt, dateNaisTxt
-											 ,numTxt, numCinTxt, montantTxt, numQuitTxt,dateQuitTxt, serieBox
-											 ,situationBox, nationBox, anneBox, sexeBox, typeEt
-											 , typefilComb,fil, table,txtTab2,txtTab3, image);
-									Methode.enable1(txtTab1, numBaccTxt, numTelTxt, dateNaisTxt
-											 , numTxt, numCinTxt, montantTxt, numQuitTxt, dateQuitTxt, serieBox
-											 , situationBox, nationBox,anneBox, sexeBox,typeEt
-											 ,typefilComb, txtTab2, txtTab3);
-									numTxt.setEnabled(true);
+									}
+			
+								} catch (IOException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								} catch (URISyntaxException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+							}
+						
+					
+												
 						}else {
-							if(typefilComb.getSelectedIndex()!=0) {
-							
-									DataBase.ajout_etudiant_fac(
-									numTxt.getText(), 
-									nomEtTxt.getText().toUpperCase(),
-								    Methode.finitText(prenomEtTxt.getText()), 
-								    Methode.dateText(dateNaisTxt.getText()), 
-									Methode.finitText(lieuNaissTxt.getText()),
-									(String)nationBox.getSelectedItem(),
-									(String)sexeBox.getSelectedItem(),
-									(String)situationBox.getSelectedItem(),
-									numTelTxt.getText(),
-									numCinTxt.getText(), 
-									Methode.dateText(dateCinTxt.getText()), 
-									Methode.finitText(lieuCinTxt.getText()),
-									(String)serieBox.getSelectedItem(),
-									(String)anneBox.getSelectedItem(),
-									numBaccTxt.getText(),
-									centreBaccTxt.getText(), 
-									adresseEtTxt.getText(), 
-									professionEtTxt.getText(), 
-									nomPereTxt.getText(), 
-									professionPereTxt.getText(), 
-									nomMereTxt.getText(),
-									professionMereTxt.getText(),
-									adressePaTxt.getText(), 
-									numTxt.getText(),montantTxt.getText(),
-									numQuitTxt.getText(),
-									Methode.dateText(dateQuitTxt.getText()),
-									(String)typeEt.getSelectedItem(),
-									(String)typefilComb.getSelectedItem(),mention);
-									model=new DataBase().importDonneIns(model,mention);
-									JOptionPane.showMessageDialog(Main.main, " ETUDIANT BIEN AJOUTER  ", "",
+
+						  	if(typefilComb.getSelectedIndex()!=0) { 
+								try {
+									JSONObject response = request_api.enregInsription(request,num_insc,nom,prenom,date_naiss,
+									lieu_naiss, nation, sexe, situation, num_tel,num_cin, date_cin, lieu_cin, bacc_serie,
+									bacc_anne, bacc_num, bacc_centre,adress, proffession, nom_pere, prof_pere, nom_mere,
+									prof_mere, adress_parent, photo, montant, num_quitance, date_quitance, niveau, parcours, mention);
+									if (response.has("detail")){
+										JOptionPane.showMessageDialog(Main.main, response.get("detail"), "Erreur",
+										JOptionPane.ERROR_MESSAGE);
+									}else{
+										JOptionPane.showMessageDialog(Main.main, " ETUDIANT BIEN AJOUTER  ", "",
 											JOptionPane.INFORMATION_MESSAGE); 
-									Methode.renitial( txtTab1, numBaccTxt, numTelTxt, dateNaisTxt
+											model=new DataBase().importDonneIns(model);
+										Methode.renitial( txtTab1, numBaccTxt, numTelTxt, dateNaisTxt
 											 ,numTxt, numCinTxt, montantTxt, numQuitTxt,dateQuitTxt, serieBox
 											 ,situationBox, nationBox, anneBox, sexeBox, typeEt
 											 , typefilComb,fil, table,txtTab2,txtTab3, image);
-									Methode.enable1(txtTab1, numBaccTxt, numTelTxt, dateNaisTxt
+										Methode.enable1(txtTab1, numBaccTxt, numTelTxt, dateNaisTxt
 											 , numTxt, numCinTxt, montantTxt, numQuitTxt, dateQuitTxt, serieBox
 											 , situationBox, nationBox,anneBox, sexeBox,typeEt
 											 ,typefilComb, txtTab2, txtTab3);
-									}else 
-										JOptionPane.showMessageDialog(Main.main, " AUCUN FILIERE CHOISIR  ", "ERREUR",
-											JOptionPane.ERROR_MESSAGE); 
+										Main.token = response.getString("access_token");
+										Main.role = response.getString("role");
+						
+									}
+
+								} catch (IOException e) {
+								// TODO Auto-generated catch block
+									e.printStackTrace();
+								} catch (URISyntaxException e) {
+								// TODO Auto-generated catch block
+									e.printStackTrace();
+								} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+					
+				  			}else 
+									JOptionPane.showMessageDialog(Main.main, " AUCUN FILIERE CHOISIR  ", "ERREUR",
+									JOptionPane.ERROR_MESSAGE); 
 						}	
 						
-					}	
+					 }	
 							
-					}
-				});
+				}
+			});
 
 	
 		//ACTION DE SUPPRESSION
@@ -932,7 +961,7 @@ public class Inscription<tabcombo> extends JScrollPane{
 							 , numTxt, numCinTxt, montantTxt, numQuitTxt, dateQuitTxt, serieBox
 							 , situationBox, nationBox,anneBox, sexeBox,typeEt
 							 ,typefilComb, txtTab2, txtTab3);
-					model=new DataBase().importDonneIns(model,mention);
+					model=new DataBase().importDonneIns(model);
 				}
 			}
 		});

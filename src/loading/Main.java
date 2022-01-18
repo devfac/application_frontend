@@ -36,6 +36,7 @@ import login.LoginPrincipale;
 		public static int l=0;
 		public static String mention = "";
 		static ArrayList<String> listMention = new ArrayList<String>(); 
+		public static JSONArray listnumInsc = new JSONArray(); 
 		public static JSONArray listUuidMention = new JSONArray(); 
 		public static String token = "";
 		public static String role = "";
